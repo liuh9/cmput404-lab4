@@ -1,3 +1,19 @@
 1. https://github.com/liuh9/cmput404-lab4
 
 2. The install worked successfully! Congratulations! (A rocket gif)
+
+3. When I navigate to "/", the browser shows "Page not found (404)", and says that "The empty path didn't match any of these." When I navigate to "/polls", the browser shows "Hello, world. You're at the polls index."
+
+4. Django migration is kind of a control system for the database schema. We need them to apply changes we make to our models into our datbase schema.
+
+5. I see that we can add questions and choices now. Also we can change these objects. To get custom models to appear in the Django admin page, we need to edit polls/admin.py, and use admin.site.register(Model) to add Choice and Question to the Django admin page.
+
+6. For "/polls/38/", I see "You're looking at question 38."  For "/polls/38/results", I see "You're looking at the results of question 38."  For "/polls/38/vote", I see "You're voting on question 38."
+When I use a string, I see "Page not found (404)".
+To allow arbitrary alphabetic characters, we remove "int:" in "<int:question_id>/", thus, it becomes "<question_id>/".
+
+7. When we change something, it maybe can't work anymore if we hardcode urls into the templates. To improve robustness, and make it easier to develop and upgrade the web, we shouldn't hardcode urls into the templates.
+
+8. By using Django's generic views over writing views 'the hard way', we can reduce duplicate code when we have several similar views. When there is a lot of similar code in your views, you should use a generic view. Otherwise, you shouldn't use a generic view, particularly not when the code becomes difficult to understand.
+
+
